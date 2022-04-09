@@ -15,49 +15,9 @@ h3 {
     color: #545454;
 }
 
-.btn {
-    font-size: 17px;
-    line-height: 22px;
-    color: #292929;
-    letter-spacing: 0.06em;
-    text-align: center;
-    padding: 15px 45px;
-    background-color: #F1CDB3;
-    border-radius: 100px;
-    transition: background-color 0.5s ease;
-    text-decoration: none;
-}
-
-.btn--light {
-    background-color: #FFFFFF;
-    padding: 13px 43px;
-    border: 2px solid #F1CDB3;
-}
-
-.btn:hover {
-    background-color: #FDDCC4;
-}
-
-.btn--light:hover {
-    background-color: #F1CDB3;
-}
-
 /*------------------HEADER---------------------*/
 .bg-container {
     background: url("../../assets/images/noise.png"), radial-gradient(40% 140% at 20% 0%, #5B483A 10%, #262425 100%), #211F20;
-}
-
-.container {
-    max-width: 1280px;
-    padding: 0 40px;
-    margin: auto;
-}
-
-@media (max-width: 1279.98px) {
-    .container {
-        max-width: 768px;
-        padding: 0 30px;
-    }
 }
 
 .header__top {
@@ -446,69 +406,5 @@ h3 {
 
     .donation-content__title {
         margin-bottom: 18px;            /*line-height 45px != 130%*/
-    }
-}
-/*--------------------FOOTER-------------------*/
-.bg-container-footer {
-    background:  url("../../assets/images/noise.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 40px;
-}
-
-.footer-textbox {
-    flex: 0 1 23.2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 16px 0 60px;
-}
-
-.footer-textbox__center {
-    flex: 0 1 25.167%;
-}
-
-.footer-textbox__title {
-    color: #FFFFFF;
-}
-
-.footer-textbox__content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-textbox__text {
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 0.06em;
-    color: #F1CDB3;
-}
-
-.footer-img {
-    display: block;
-    align-self: flex-end;
-}
-
-@media (max-width: 1279.98px) {
-    .footer {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 30px 34px 0;
-    }
-
-    .footer-textbox {
-        flex: 0 1 43.5%;
-        padding: 0 0 65px;
-        gap: 40px;
-    }
-    .footer-textbox__center {
-        flex: 0 1 47.1%;
-        gap: 33px;
-        margin-left: 60px;
     }
 }
