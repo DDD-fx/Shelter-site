@@ -77,6 +77,66 @@ h3 {
         padding-top: 30px;
     }
 }
+/*--------------------------BURGER------------------------*/
+
+.burger {
+    display: none;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: relative;
+}
+
+.burger--active {
+
+}
+
+.burger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F1CDB3;
+    position: absolute;
+    transition: 0.3s all linear;
+}
+
+.burger-line-second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-line-third {
+    top: 100%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 767.98px) {
+    .menu {
+        display: none;
+    }
+    .burger {
+        display: block;
+        margin-right: 20px;
+    }
+    .menu.menu--burger{
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 50px;
+        bottom: 0;
+        z-index: 3;
+        overflow: auto;
+    }
+    .menu__list.menu--burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .body--burger {
+        overflow: hidden;
+    }
+}
 
 /*-----------------NOT ONLY-------------------*/
 .not-only {
@@ -92,7 +152,6 @@ h3 {
 }
 .not-only__textbox-title {
     font-size: 44px;
-    font-weight: 400;
     line-height: 57px;
     color: #FFFFFF;
 }
@@ -121,11 +180,12 @@ h3 {
         flex-direction: column;
         gap: 100px;
         justify-content: flex-end;
+        align-items: center;
     }
 
     .not-only__textbox {
+        max-width: 460px;
         padding: 0;
-        margin: 0 124px;
     }
 
     .not-only .btn {
@@ -139,6 +199,31 @@ h3 {
 
     .not-only__img {
         max-width: 569px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .not-only {
+        gap: 105px;
+    }
+
+    .not-only__textbox {
+        margin: 0;
+        align-items: center;
+    }
+
+    .not-only__textbox-title {
+        font-size: 25px;
+        line-height: 32px;
+        text-align: center;
+    }
+    
+    .not-only__textbox-subtitle {
+        text-align: center;
+    }
+
+    .not-only__img {
+        max-width: 260px;
     }
 }
 

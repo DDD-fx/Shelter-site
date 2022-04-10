@@ -108,8 +108,13 @@
 
 @media (max-width: 1279.98px) {
     .container {
-        max-width: 768px;
         padding: 0 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        padding: 0 10px;
     }
 }
 /*--------------------FOOTER-------------------*/
@@ -155,24 +160,31 @@
 
 .footer-img {
     display: block;
+    grid-area: img;
     align-self: flex-end;
 }
 
 @media (max-width: 1279.98px) {
     .footer {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template: "contacts address" "img img" / 279px 302px;
+        gap: 65px 60px;
         justify-content: center;
         padding: 30px 34px 0;
     }
 
     .footer-textbox {
-        flex: 0 1 43.5%;
-        padding: 0 0 65px;
+        grid-area: contacts;
+        padding: 0;
         gap: 40px;
     }
+
     .footer-textbox__center {
-        flex: 0 1 47.1%;
+        grid-area: address;
         gap: 33px;
-        margin-left: 60px;
+    }
+
+    .footer-img {
+        justify-self: center;
     }
 }
