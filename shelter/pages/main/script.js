@@ -19,6 +19,7 @@ document.querySelector(".js-slider-btn-right").addEventListener("click", functio
 
 });*/
 
+/*
 
 let burger = document.querySelector(".burger");
 let menu = document.querySelector(".menu");
@@ -42,4 +43,4 @@ menu__link.forEach(el => el.addEventListener("click", function () {
     document.body.classList.toggle("body-burger");
     header_top.classList.toggle("burger--active");
     })
-)
+)*/
