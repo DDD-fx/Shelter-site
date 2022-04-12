@@ -1,18 +1,4 @@
-html,
-body {
-    height: 100%;
-    font: 400 15px/24px Georgia, serif;
-    color: #545454;
-    background: #ffffff;
-    scroll-behavior: smooth
-}
 
-h3 {
-    font-size: 35px;
-    line-height: 45px;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-}
 
 /*-------------------HEADER----------------------------*/
 .sticky-container {
@@ -70,6 +56,15 @@ h3 {
     color: #292929;
 }
 
+/*-------------------------BURGER-----------------*/
+.menu.menu--burger {
+    background: #FFFFFF !important;
+}
+
+.burger-line {
+    background: #000000 !important;
+}
+
 /*-----------------MAIN------------------------*/
 .our-friends {
     padding: 80px 0 100px;
@@ -98,6 +93,16 @@ h3 {
 
     .our-friends-flex {
         gap: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .btn-block {
+        gap: 10px;
+    }
+
+    .our-friends {
+        padding: 42px 0;
     }
 }
 
@@ -178,5 +183,11 @@ h3 {
 @media (max-width: 1279.98px) {
     .slider-cards {
         padding: 30px 0 40px;
+    }
+}
+
+@media (max-width: 768.98px) {
+    .slider-cards {
+        padding: 42px 0;
     }
 }

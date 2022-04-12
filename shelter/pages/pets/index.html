@@ -8,44 +8,44 @@
     <link rel="stylesheet" type="text/css" href="../main/normalize.css">
     <link rel="stylesheet" type="text/css" href="../main/common_styles.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../main/burger.css">
 </head>
 <body>
-
-    <div class="sticky-container">
-        <div class="container">
-            <header class="header">
-                <div class="header__top">
-                    <a class="header-logo" href="../main/index.html">
-                        <h1 class="header-logo__title">Cozy House</h1>
-                        <div class="header-logo__subtitle">
-                            Shelter for pets in Boston
-                        </div>
-                    </a>
-                    <nav class="menu">
-                        <!-- <button class="menu__btn">
-                             <span></span>
-                             <span></span>
-                             <span></span>
-                         </button>-->
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a class="menu__link" href="../main/index.html">About the shelter</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link menu__link--selected" href="#">Our pets</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="../main/index.html#help">Help the shelter</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#footer">Contacts</a>
-                            </li>
-                        </ul>
-                    </nav>
+<div class="sticky-container">
+    <div class="container">
+        <header class="header">
+            <div class="header__top">
+                <a class="header-logo" href="../main/index.html">
+                    <h1 class="header-logo__title">Cozy House</h1>
+                    <div class="header-logo__subtitle">
+                        Shelter for pets in Boston
+                    </div>
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="../main/index.html">About the shelter</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--selected" href="#">Our pets</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="../main/index.html#help">Help the shelter</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#footer">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span class="burger-line burger-line-first"></span>
+                    <span class="burger-line burger-line-second"></span>
+                    <span class="burger-line burger-line-third"></span>
                 </div>
-            </header>
-        </div>
+            </div>
+        </header>
     </div>
+</div>
 
 <main>
     <section class="our-friends" id="our-friends">
@@ -126,7 +126,7 @@
             <div class="footer-textbox">
                 <h3 class="footer-textbox__title">For questions and suggestions</h3>
                 <div class="footer-textbox__content">
-                    <svg class="icon icon--40-26">
+                    <svg class="icon icon--40-26 icon--mail">
                         <use xlink:href="../../assets/icons/icons.svg#mail"></use>
                     </svg>
                     <a class="footer-textbox__text" href="mailto:email@shelter.com" title="email">email@shelter.com</a>
@@ -161,5 +161,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="../main/burger.js"></script>
 </body>
 </html>

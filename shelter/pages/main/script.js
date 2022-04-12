@@ -19,28 +19,7 @@ document.querySelector(".js-slider-btn-right").addEventListener("click", functio
 
 });*/
 
-/*
-
-let burger = document.querySelector(".burger");
-let menu = document.querySelector(".menu");
-let menu__list = document.querySelector(".menu__list");
-let menu__link = document.querySelectorAll(".menu__link");
-let header_top = document.querySelector(".header__top");
 
 
-burger.addEventListener("click", function () {
-    burger.classList.toggle("burger--active");
-    menu.classList.toggle("menu--burger");
-    menu__list.classList.toggle("menu--burger");
-    document.body.classList.toggle("body-burger");
-    header_top.classList.toggle("burger--active");
-})
 
-menu__link.forEach(el => el.addEventListener("click", function () {
-    burger.classList.toggle("burger--active");
-    menu.classList.toggle("menu--burger");
-    menu__list.classList.toggle("menu--burger");
-    document.body.classList.toggle("body-burger");
-    header_top.classList.toggle("burger--active");
-    })
-)*/
+
