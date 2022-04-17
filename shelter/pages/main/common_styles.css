@@ -69,7 +69,7 @@ h3 {
     color: #545454;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
     h3 {
         font-size: 25px;
         line-height: 32px;
@@ -113,18 +113,8 @@ h3 {
     text-decoration: none;
 }
 
-.btn--light {
-    background-color: #FFFFFF;
-    padding: 13px 43px;
-    border: 2px solid #F1CDB3;
-}
-
 .btn:hover {
     background-color: #FDDCC4;
-}
-
-.btn--light:hover {
-    background-color: #F1CDB3;
 }
 
 .container {
@@ -133,17 +123,65 @@ h3 {
     margin: auto;
 }
 
-@media (max-width: 1279.98px) {
+@media (max-width: 1279px) {
     .container {
         padding: 0 30px;
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
     .container {
         padding: 0 10px;
     }
 }
+
+/*---------------------SLIDER------------------*/
+.slider-card {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+    overflow: hidden;
+}
+
+.slider-card__title {
+    font-size: 20px;
+    line-height: 23px;
+    color: #545454;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.btn--light {
+    background-color: #FFFFFF;
+    padding: 13px 43px;
+    border: 2px solid #F1CDB3;
+}
+
+.slider-card .btn--light {
+    margin-bottom: 30px;
+}
+
+.slider-card:hover {
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.btn--light:hover {
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
+}
+
+.slider-card:hover .btn--light {
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
+}
+
 /*--------------------FOOTER-------------------*/
 .bg-container-footer {
     background:  url("../../assets/images/noise.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
@@ -191,7 +229,7 @@ h3 {
     align-self: flex-end;
 }
 
-@media (max-width: 1279.98px) {
+@media (max-width: 1279px) {
     .footer {
         display: grid;
         grid-template: "contacts address" "img img" / 279px 302px;
@@ -216,7 +254,7 @@ h3 {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
     .footer {
         display: flex;
         flex-direction: column;
@@ -363,8 +401,8 @@ h3 {
 
 .modal-list li::before {
     content: "\2022";
-    color: #F1CDB3;
     display: inline-block;
+    color: #F1CDB3;
     margin: 0 10px 0 0;
 }
 
