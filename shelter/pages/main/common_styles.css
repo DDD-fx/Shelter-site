@@ -54,7 +54,6 @@
 
 html,
 body {
-    height: 100%;
     font: 400 15px/24px Georgia, serif;
     color: #4C4C4C;
     background: #ffffff;
@@ -157,7 +156,7 @@ h3 {
 }
 
 .btn--light {
-    background-color: #FFFFFF;
+    background-color: #FAFAFA;
     padding: 13px 43px;
     border: 2px solid #F1CDB3;
 }
