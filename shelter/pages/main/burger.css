@@ -1,11 +1,12 @@
-/*--------------------------BURGER------------------------*/
 
+/*--------------------------BURGER------------------------*/
 .burger {
     display: none;
     width: 30px;
     height: 22px;
     cursor: pointer;
     position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .burger-line {
@@ -39,8 +40,16 @@
     transform: translateX(10px) translateY(-11px) rotate(90deg);
 }
 
-.sticky-container.burger--active {
-    position: static;
+.sticky-container.burger--active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #29292999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 65%;
 }
 
 .header-logo--burger {
@@ -63,15 +72,14 @@
     }
 
     .body-burger::before {
-        display: block;
         content: "";
-        background: #29292999;
+        display: block;
         position: absolute;
-        width: 100vh;
-        height: 100vh;
+        background: #29292999;
         top: 0;
         right: 0;
-        z-index: 2;
+        bottom: 0;
+        left: 0;
         opacity: 65%;
     }
 

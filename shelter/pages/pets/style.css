@@ -1,5 +1,4 @@
 
-
 /*-------------------HEADER----------------------------*/
 .sticky-container {
     position: sticky;
@@ -58,6 +57,13 @@
 }
 
 /*-------------------------BURGER-----------------*/
+
+@media (max-width: 767px) {
+    body {
+        position: relative;
+    }
+}
+
 .menu {
     background-color: #FFFFFF !important;
 }
@@ -79,7 +85,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 30px;              /*тени*/
 }
 
 .our-friends__title {
@@ -112,12 +118,17 @@
 }
 
 /*-------------------SLIDER---------------------------*/
+.our-friends .container{
+    padding: 0;             /*тени*/
+}
+
 .slider-cards {
     display: flex;
     gap: 30px 40px;
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
+    padding: 30px 40px;       /*тени*/
 }
 
 .slider-card--hidden {

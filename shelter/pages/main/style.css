@@ -124,11 +124,12 @@
     }
 
     .not-only__img-container {
+        max-width: 569px;   /*--------*/
         margin: 0;
     }
 
     .not-only__img {
-        max-width: 569px;
+        max-width: 100%;
     }
 }
 
@@ -153,8 +154,8 @@
         text-align: center;
     }
 
-    .not-only__img {
-        max-width: 260px;
+    .not-only__img-container {
+        margin-left: 40px;
     }
 }
 
@@ -168,25 +169,31 @@
     max-width: 850px;
     margin: 0 auto;
     align-items: center;
-}
-
-.about-textbox {
-    margin-left: 120px;
+    gap: 120px;
 }
 
 .about-textbox__subtitle {
     font: 15px/24px Arial, sans-serif;
-    margin-top: 25px;
+    padding-top: 25px;
+}
+
+.about__img {
+    display: block;
 }
 
 @media (max-width: 1279px) {
     .about-flex {
-        flex-direction: column-reverse;
         max-width: 430px;
+        flex-direction: column-reverse;
+        gap: 80px;
     }
 
-    .about-textbox {
-        margin: 0 0 80px;
+    .about__img-container {
+        max-width: 300px;
+    }
+
+    .about__img {
+        max-width: 100%;
     }
 }
 
@@ -195,9 +202,9 @@
         padding: 42px 0;
     }
 
-    .about-textbox {
-        margin-bottom: 42px;
-        padding: 0 15px;
+    .about-flex {
+        max-width: 270px;
+        gap: 42px;
     }
 
     .about-textbox__title {
@@ -207,7 +214,11 @@
 
     .about-textbox__subtitle {
         text-align: justify;
-        margin-top: 22px;
+        padding-top: 22px;
+    }
+
+    .about__img-container {
+        max-width: 260px;
     }
 }
 /*-------------------OUR FRIENDS--------------------*/
@@ -405,17 +416,17 @@
 
 .donation-flex {
     display: flex;
+    gap: 30px;
     align-items: center;
     justify-content: center;
 }
 
 .donation-content {
-    width: 380px;
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 30px;
 }
 
 .donation-content__title {
@@ -461,10 +472,7 @@
 @media (max-width: 1279px) {
     .donation-flex {
         flex-direction: column-reverse;
-    }
-
-    .donation-content {
-        margin: 0 0 60px;
+        gap: 60px;
     }
 
     .donation-content__title {
@@ -477,10 +485,13 @@
         padding: 42px 0;
     }
 
+    .donation-flex {
+        gap: 42px;
+    }
+
     .donation-content {
-        max-width: 100%;
+        max-width: 300px;
         align-items: center;
-        margin-bottom: 42px;
     }
 
     .donation-content__title {

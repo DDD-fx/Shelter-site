@@ -75,6 +75,14 @@ h3 {
     }
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .icon {
     flex: 0 0 auto;
 }
@@ -278,8 +286,7 @@ h3 {
     }
 
     .footer-img {
-        max-width: 100%;
-        padding: 0 20px;
+        max-width: calc(100% - 40px);
         align-self: center;
     }
 }
