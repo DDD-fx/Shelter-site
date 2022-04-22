@@ -2,10 +2,10 @@
 /*--------------------------BURGER------------------------*/
 .burger {
     display: none;
+    position: relative;
     width: 30px;
     height: 22px;
     cursor: pointer;
-    position: relative;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -28,28 +28,16 @@
     transform: translateY(-50%);
 }
 
-.burger--active .burger-line-first {
-    transform: translateX(-10px) translateY(11px) rotate(90deg);
-}
-
-.burger--active .burger-line-second {
-    transform: rotate(90deg);
-}
-
-.burger--active .burger-line-third {
-    transform: translateX(10px) translateY(-11px) rotate(90deg);
-}
-
 .sticky-container.burger--active::before {
     content: "";
     display: block;
     position: absolute;
-    background: #29292999;
+    background: #292929;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 65%;
+    opacity: 60%;
 }
 
 .header-logo--burger {
@@ -58,7 +46,12 @@
 
 @media (max-width: 767px) {
     .burger {
+        transition: 0.3s;
         z-index: 10;
+    }
+
+    .burger.burger--active {
+        transform: rotate(90deg);
     }
 
     .header-logo--burger {
@@ -75,12 +68,12 @@
         content: "";
         display: block;
         position: absolute;
-        background: #29292999;
+        background: #292929;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 65%;
+        opacity: 60%;
     }
 
     .menu {
@@ -91,7 +84,7 @@
         z-index: 3;
         overflow: auto;
         background: #292929;
-        transition: right 0.4s ease-out;
+        transition: right 0.6s ease-in;
     }
 
     .burger {
@@ -101,6 +94,7 @@
 
     .menu.menu--burger{
         right: 0;
+        transition: right 0.4s ease-out;
     }
 
     .menu__list{

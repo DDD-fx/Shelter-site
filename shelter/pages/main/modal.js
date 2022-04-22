@@ -1,59 +1,51 @@
-
-let pets;
 fetch("../../assets/pets.json")
-    .then(response => {
-        return response.json();
-    })
-    .then(jsondata => {
-        pets = jsondata;
-    });
+.then(response => {
+    return response.json();
+})
+.then(jsondata => {
+    let pets = jsondata;
 
-function createModal (petName) {
-    return pets.map(item => {
-        if (petName === item.name){
-
-        let modalText = `<img class="modal__img" src="${item.img}" alt="${item.name}"><div class="modal-textbox"><h3 class="modal-textbox__title">${item.name}</h3><div class="modal-textbox__subtitle">${item.type} - ${item.breed}</div><div class="modal-textbox__description">${item.description}</div><ul class="modal-list">`;
+    function createModal (petID) {
+        let pet = pets.filter(item => item.id === petID)[0];
+        let modalText = `<img class="modal__img" src="${pet.img}" alt="${pet.name}"><div class="modal-textbox"><h3 class="modal-textbox__title">${pet.name}</h3><div class="modal-textbox__subtitle">${pet.type} - ${pet.breed}</div><div class="modal-textbox__description">${pet.description}</div><ul class="modal-list">`;
 
         let list = "";
-        for (let key in item) {
-            if (item[key] !== ["none"] &&
-                (key === "age" ||  key === "inoculations" ||
-                key === "diseases" || key === "parasites")) {
+        for (let key in pet) {
+            if (key === "age" ||  key === "inoculations" ||
+                key === "diseases" || key === "parasites") {
 
+                if (!Array.isArray(pet[key])) pet[key] = [pet[key]]
                 let keyUC = key[0].toUpperCase() + key.slice(1);
-                    list += `<li><b>${keyUC}: </b>${item[key]}</li>`
+                list += `<li><b>${keyUC}: </b>${pet[key].join(", ")} </li>`
             }
         }
         return modalText + list + "</ul></div>"
-        }
-    });
-}
-
-let sliderCards = document.querySelectorAll(".slider-card");
-let modalOuter = document.querySelector(".modal-outer");
-let modalBtn = document.querySelector(".modal-close-btn");
-
-sliderCards.forEach(item => item.addEventListener("click", function (event) {
-    let petName = event.target.closest(".slider-card").querySelector(".slider-card__title").innerHTML;
-
-    modalOuter.classList.toggle("modal-outer--visible");
-    document.body.classList.toggle("modal-body");
-
-    let modalInner = createModal(petName);
-    document.getElementsByClassName('modal')[0].innerHTML = modalInner.join("");
-
-})
-)
-
-modalBtn.addEventListener("click", function () {
-    modalOuter.classList.toggle("modal-outer--visible");
-    document.body.classList.toggle("modal-body")
-})
-
-
-/*document.addEventListener( 'click', (e) => {
-    if (!e.target.closest('.modal-container')){
-        modalOuter.classList.toggle("modal-outer--visible");
-        document.body.classList.toggle("modal-body");
     }
-})*/
+
+    let sliderCards = document.querySelectorAll(".slider-cards__active");
+    let modalOuter = document.querySelector(".modal-outer");
+    let modalBtn = document.querySelector(".modal-close-btn");
+
+    sliderCards.forEach(item => item.addEventListener("click", function (event) {
+            let petID = event.target.closest(".slider-card").getAttribute("petid");
+            modalOuter.classList.toggle("modal-outer--visible");
+            document.body.classList.toggle("modal-body");
+            document.querySelector('.modal').innerHTML = createModal(petID);
+        })
+    )
+
+    modalBtn.addEventListener("click", function () {
+        modalOuter.classList.toggle("modal-outer--visible");
+        document.body.classList.toggle("modal-body")
+    })
+
+
+    modalOuter.addEventListener( 'click', (e) => {
+        if (!e.target.closest('.modal') && !e.target.closest('.modal-close-btn')){
+            modalOuter.classList.toggle("modal-outer--visible");
+            document.body.classList.toggle("modal-body");
+        }
+    })
+});
+
+
