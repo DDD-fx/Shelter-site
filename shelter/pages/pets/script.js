@@ -65,7 +65,7 @@ createSlides();
 
 sliderCards.innerHTML = slidesCollection.slice(0,1).join("");
 
-let arrToCheck = [];
+let arrToCheck = [];    //проверка на уникальность и рандом по ID
 slidesCollection.forEach(subarr => {
     arrToCheck.push(subarr.toString().match(/\d/g))
 })

@@ -1,5 +1,5 @@
 
-/*--------------------------BURGER------------------------*/
+
 .burger {
     display: none;
     position: relative;
@@ -55,9 +55,8 @@
     }
 
     .header-logo--burger {
-        display: inline-block;
-        position: relative;
-        transform: translate(10px, 30px);
+        display: block;
+        margin: 30px 0 30px 10px;
     }
 
     .body-burger {
@@ -78,6 +77,9 @@
 
     .menu {
         position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
         width: 320px;
         top: 0;
         right: -999px;
@@ -97,15 +99,20 @@
         transition: right 0.4s ease-out;
     }
 
+    .menu__list--burger {
+        height: 100%;
+        overflow: auto;
+    }
+
     .menu__list{
-        height: 100vh;
+        height: 100%;
+        min-height: 400px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 40px;
-        padding: 0;
+        padding: 0 0 90px 0;        /*выравнивание по высоте экрана*/
         margin:0 38px 0 39px;
-
     }
 
     .menu__item + .menu__item{
@@ -117,3 +124,5 @@
         line-height: 51px;
     }
 }
+
+
