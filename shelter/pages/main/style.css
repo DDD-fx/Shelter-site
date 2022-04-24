@@ -62,7 +62,7 @@
     color: #FAFAFA;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .header__top {
         padding-top: 30px;
     }
@@ -105,7 +105,7 @@
     display: block;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .not-only {
         flex-direction: column;
         gap: 100px;
@@ -133,7 +133,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .not-only {
         gap: 105px;
     }
@@ -181,7 +181,7 @@
     display: block;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .about-flex {
         max-width: 430px;
         flex-direction: column-reverse;
@@ -197,7 +197,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .about {
         padding: 42px 0;
     }
@@ -237,7 +237,7 @@
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .our-friends {
         padding: 42px 0;
     }
@@ -312,7 +312,7 @@
     animation: 1s move-left;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .slider-cards {
         padding: 0 12px;
     }
@@ -344,7 +344,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .our-friends-flex {
         gap: 42px;
     }
@@ -417,7 +417,7 @@
     padding-top: 30px;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .help-content {
         display: grid;
         grid-template-columns: repeat(3, 170px);
@@ -426,7 +426,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .help {
         padding: 42px 0;
     }
@@ -514,7 +514,7 @@
     color: #B2B2B2;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .donation-flex {
         flex-direction: column-reverse;
         gap: 60px;
@@ -525,7 +525,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .donation {
         padding: 42px 0;
     }

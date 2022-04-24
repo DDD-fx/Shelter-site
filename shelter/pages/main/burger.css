@@ -44,7 +44,7 @@
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .burger {
         transition: 0.3s;
         z-index: 10;

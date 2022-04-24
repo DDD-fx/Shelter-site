@@ -17,7 +17,7 @@ function createModal (petID) {
     return modalText + list + "</ul></div>"
 }
 
-let sliderCards = document.querySelectorAll(".slider-cards__active");
+let sliderCards = document.querySelectorAll(".slider-cards");
 let modalOuter = document.querySelector(".modal-outer");
 let modalBtn = document.querySelector(".modal-close-btn");
 

@@ -60,65 +60,15 @@
                     are looking for a house
                 </h3>
 
-                <div class="slider-cards">
-
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-katrine.jpg"
-                             alt="katrine">
-                        <div class="slider-card__title">Katrine</div>
-                        <a class="btn btn--light">Learn more</a>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-jennifer.jpg"
-                             alt="jennifer">
-                        <div class="slider-card__title">Jennifer</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-woody.jpg" alt="woody">
-                        <div class="slider-card__title">Woody</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-sophia.jpg"
-                             alt="sophia">
-                        <div class="slider-card__title">Sophia</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-timmy.jpg" alt="timmy">
-                        <div class="slider-card__title">Timmy</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-charly.jpg"
-                             alt="charly">
-                        <div class="slider-card__title">Charly</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-scarlett.jpg"
-                             alt="scarlett">
-                        <div class="slider-card__title">Scarlett</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-                    <div class="slider-card">
-                        <img class="slider-card__img" src="../../assets/images/pets/pets-freddie.jpg"
-                             alt="freddie">
-                        <div class="slider-card__title">Freddie</div>
-                        <div class="btn btn--light">Learn more</div>
-                    </div>
-
-                </div>
+                <div class="slider-cards"></div>
 
                 <div class="btn-block">
-                    <button class="slider-btn" disabled>&lt;&lt;</button>
-                    <button class="slider-btn" disabled>&lt;</button>
-                    <button class="slider-btn active-page">1</button>
-                    <button class="slider-btn">&gt;</button>
-                    <button class="slider-btn">&gt;&gt;</button>
+                    <button class="slider-btn js-btn-left--last" disabled>&lt;&lt;</button>
+                    <button class="slider-btn js-btn-left" disabled>&lt;</button>
+                    <button class="slider-btn active-page js-active-page">1</button>
+                    <button class="slider-btn js-btn-right">&gt;</button>
+                    <button class="slider-btn js-btn-right--last">&gt;&gt;</button>
                 </div>
-
             </div>
         </div>
     </section>
@@ -162,8 +112,16 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<div class="modal-outer">
+    <div class="modal-container">
+        <div class="modal-close-btn"></div>
+        <div class="modal"></div>
+    </div>
+</div>
+
+<script type="module" src="../../assets/pets.js"></script>
+<script type="module" src="script.js"></script>
 <script src="burger.js"></script>
-<!--<script src="modal.js"></script>-->
+<script type="module" src="modal.js"></script>
 </body>
 </html>

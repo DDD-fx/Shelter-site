@@ -68,7 +68,7 @@ h3 {
     color: #545454;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     h3 {
         font-size: 25px;
         line-height: 32px;
@@ -130,13 +130,13 @@ a {
     margin: auto;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .container {
         padding: 0 30px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .container {
         padding: 0 10px;
     }
@@ -237,7 +237,7 @@ a {
     align-self: flex-end;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .footer {
         display: grid;
         grid-template: "contacts address" "img img" / 279px 302px;
@@ -262,7 +262,7 @@ a {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
     .footer {
         display: flex;
         flex-direction: column;
@@ -306,6 +306,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.modal-outer--visible:hover .modal-container:not(:hover) .modal-close-btn{
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
 }
 
 .modal-outer.modal-outer--visible::before {
@@ -324,7 +330,6 @@ a {
 }
 
 .modal-container {
-    display: block;
     position: relative;
     max-width: 900px;
     max-height: 500px;
@@ -341,6 +346,7 @@ a {
     top: -52px;
     right: -42px;
     transition: 0.3s ease;
+   /* background-color: #7b7b7b;*/
 }
 
 .modal-close-btn:hover {
@@ -355,6 +361,7 @@ a {
     border-radius: 9px;
     overflow: hidden;
     z-index: 10;
+    cursor: auto;
 }
 
 .modal__img {
@@ -391,10 +398,10 @@ a {
 }
 
 .modal-list {
-    list-style: none; /*url('../../assets/icons/modal-list-dot.svg') outside;*/  /*none*/
+    list-style: none;
     line-height: 17px;
     letter-spacing: 0.06em;
-    margin: 30px 0 0;
+    margin: 40px 0 0;
     padding: 0;
 }
 
@@ -409,7 +416,7 @@ a {
     margin: 0 10px 0 0;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1279.9px) {
     .modal-container {
         width: 630px;
         height: 350px;
@@ -438,7 +445,7 @@ a {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
 
     .modal-container {
         width: 240px;
