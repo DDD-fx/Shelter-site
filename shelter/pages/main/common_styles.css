@@ -296,7 +296,7 @@ a {
 .modal-outer {
     display: none;
     position: fixed;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -307,6 +307,8 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 54px;
+    overflow: auto;
 }
 
 .modal-outer--visible:hover .modal-container:not(:hover) .modal-close-btn{
@@ -332,7 +334,7 @@ a {
 .modal-container {
     position: relative;
     max-width: 900px;
-    max-height: 500px;
+    max-height: 100%;
 }
 
 .modal-close-btn {
@@ -419,7 +421,6 @@ a {
 @media (max-width: 1279.9px) {
     .modal-container {
         width: 630px;
-        height: 350px;
     }
 
     .modal__img {
@@ -449,7 +450,6 @@ a {
 
     .modal-container {
         width: 240px;
-        height: 341px;
     }
 
     .modal-close-btn {
