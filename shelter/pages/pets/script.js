@@ -11,7 +11,7 @@ function createSlides() {
             let randomIndex = Math.floor(Math.random() * pets.length);
             uniqueCollection.add(randomIndex)
         }
-//массив из 6 подмассивов, содержащих по 8 карточек. Всего 48 рандомных карточек
+//настоящий рандомный массив из 6 подмассивов, содержащих по 8 карточек. Всего 48 рандомных карточек. Каждая страница/подмассив удовлеворяет условиям
         uniqueCollectionArr.push([...uniqueCollection])
     }
 

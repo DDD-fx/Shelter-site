@@ -40,3 +40,4 @@ modalOuter.addEventListener( 'click', (e) => {
         document.body.classList.toggle("modal-body");
     }
 })
+
