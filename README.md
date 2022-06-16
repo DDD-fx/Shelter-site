@@ -1,1 +1,1 @@
-https://ddd-fx.github.io/shelter/
+https://ddd-fx.github.io/shelter-site/
