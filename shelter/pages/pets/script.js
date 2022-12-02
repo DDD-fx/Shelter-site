@@ -48,16 +48,18 @@ function createSlides() {
     }
     createSlidesInner(uniqueCollectionArr, slidesCollection)
 }
+
 function createSlidesInner(uniqueCollectionArr, slidesCollection) {
 
     uniqueCollectionArr.forEach(item => {       //подмассивы с индексами от 0 до 7.
         let slidesInner = "";
         item.forEach(index => {                 //элемент подмассива
-        slidesInner += `<div class="slider-card" petID="${pets[index].id}"><img class="slider-card__img" src="${pets[index].img} "alt="${pets[index].name}"><div class="slider-card__title">${pets[index].name}</div><a class="btn btn--light">Learn more</a></div>`
+        slidesInner += `<div class="slider-card" petID="${pets[index].id}"><img class="slider-card__img" src="${pets[index].img}" alt="${pets[index].name}"><div class="slider-card__title">${pets[index].name}</div><a class="btn btn--light">Learn more</a></div>`
         })
         slidesCollection.push([slidesInner])    //каждый подмассив содержит код отображаемого на данной ширине экрана количества карт
     })
 }
+
 let slidesCollection = [];
 let sliderCards = document.body.querySelector(".slider-cards");
 

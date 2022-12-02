@@ -1,4 +1,4 @@
-import {pets} from '../../assets/pets.js';
+import {pets} from '../assets/pets.js';
 
 function createModal (petID) {
     let pet = pets.filter(item => item.id === petID)[0];
@@ -17,19 +17,24 @@ function createModal (petID) {
     return modalText + list + "</ul></div>"
 }
 
-let sliderCards = document.querySelectorAll(".slider-cards");
+let sliderCards;
+if (!window.location.pathname.includes('pets')) {
+    sliderCards = document.querySelectorAll(".slider-cards__active");
+} else {
+    sliderCards = document.querySelectorAll(".slider-cards");
+}
 let modalOuter = document.querySelector(".modal-outer");
 let modalBtn = document.querySelector(".modal-close-btn");
 
-sliderCards.forEach(item => item.addEventListener("click", function (event) {
-        let petID = event.target.closest(".slider-card").getAttribute("petid");
+sliderCards.forEach(item => item.addEventListener("click", (event) => {
+        const petID = event.target.closest(".slider-card").getAttribute("petid");
         modalOuter.classList.toggle("modal-outer--visible");
         document.body.classList.toggle("modal-body");
         document.querySelector('.modal').innerHTML = createModal(petID);
     })
 )
 
-modalBtn.addEventListener("click", function () {
+modalBtn.addEventListener("click", () => {
     modalOuter.classList.toggle("modal-outer--visible");
     document.body.classList.toggle("modal-body")
 })

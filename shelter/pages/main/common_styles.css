@@ -164,6 +164,10 @@ a {
     text-align: center;
 }
 
+.slider-card__img {
+    flex-basis: 270px;
+}
+
 .btn--light {
     background-color: #FAFAFA;
     padding: 13px 43px;

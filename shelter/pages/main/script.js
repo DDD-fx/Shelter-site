@@ -28,7 +28,7 @@ function createLeftRightSlides() {
 function createSlidesInner(IDCollection, slide) {
     slidesInner = "";
     IDCollection.forEach(index => {
-        slidesInner += `<div class="slider-card" petID="${pets[index].id}"><img class="slider-card__img" src="${pets[index].img} "alt="${pets[index].name}"><div class="slider-card__title">${pets[index].name}</div><a class="btn btn--light">Learn more</a></div>`
+        slidesInner += `<div class="slider-card" petID="${pets[index].id}"><img class="slider-card__img" src="${pets[index].img}" alt="${pets[index].name}"><div class="slider-card__title">${pets[index].name}</div><a class="btn btn--light">Learn more</a></div>`
     })
     slide.innerHTML = slidesInner
 }
@@ -50,20 +50,19 @@ const BTN_RIGHT = document.querySelector(".js-slider-btn-right");
 
 const moveLeft = () => {
     CAROUSEL.classList.add("transition-left");
-    BTN_LEFT.removeEventListener("click", moveLeft)     //невозможно нажать во время анимации
-    BTN_RIGHT.removeEventListener("click", moveRight)
+    BTN_LEFT.removeEventListener("click", moveLeft);
+    BTN_RIGHT.removeEventListener("click", moveRight);
 }
 const moveRight = () => {
     CAROUSEL.classList.add("transition-right");
-    BTN_RIGHT.removeEventListener("click", moveRight)
-    BTN_LEFT.removeEventListener("click", moveLeft)
+    BTN_RIGHT.removeEventListener("click", moveRight);
+    BTN_LEFT.removeEventListener("click", moveLeft);
 }
 
 BTN_LEFT.addEventListener("click", moveLeft);
 BTN_RIGHT.addEventListener("click", moveRight);
 
 sliderCardsContainer.addEventListener("animationend", (animation) => {
-
     if (animation.animationName === "move-left") {
         CAROUSEL.classList.remove("transition-left")
         activeSlide.innerHTML = leftSlide.innerHTML;
